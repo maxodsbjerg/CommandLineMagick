@@ -9,3 +9,7 @@ Fede oneliners og scripts
 
 ## Batch process files in OCRmyPDF:
     parallel --tag -j 2 ocrmypdf -l dan+eng '{}' '{}' ::: *.pdf
+
+## Combinging several pdfs into one using qpdf
+
+`qpdf --empty --pages *.pdf -- out.pdf`
