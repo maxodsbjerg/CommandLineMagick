@@ -7,5 +7,5 @@ Fede oneliners og scripts
 
 `ls | egrep 'Skærm.+\.png'| xargs -I '{}' cp '{}' ~/Documents/workspace/2021/image_mosaic/pic/screenshots`
 
-## Code Batch process files in OCRmyPDF:
+## Batch process files in OCRmyPDF:
     parallel --tag -j 2 ocrmypdf -l dan+eng '{}' '{}' ::: *.pdf
