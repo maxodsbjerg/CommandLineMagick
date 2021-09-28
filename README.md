@@ -13,3 +13,9 @@ Fede oneliners og scripts
 ## Combinging several pdfs into one using qpdf
 
     qpdf --empty --pages *.pdf -- out.pdf`
+    
+## Create PDF as A4 paper from jpg and jpeg files
+    img2pdf --pagesize A4 *.jp* --output test.pdf
+    
+## Ghostscript command to compress pdf-files
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
