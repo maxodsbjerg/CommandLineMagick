@@ -2,10 +2,17 @@
 
 Fede oneliners og scripts
 
+## Manipulate results from ls
 
-## Copy files returnet from ls
+I de første to commands herunder er `-I` the name of the game. Den får xargs til at newline som seperator mellem inputs i stedet for whitespace. Hvilket er noget rod, når der er mellemrum i filnavnet. 
+
+### Copy files returnet from ls
 
     ls | egrep 'Skærm.+\.png'| xargs -I '{}' cp '{}' ~/Documents/workspace/2021/image_mosaic/pic/screenshots`
+    
+### Remove files from ls 
+    ls | egrep 'Skærm.+\.png'| xargs -I '{}' rm '{}'
+
 
 ## Batch process files in OCRmyPDF:
     parallel --tag -j 2 ocrmypdf -l dan+eng '{}' '{}' ::: *.pdf
