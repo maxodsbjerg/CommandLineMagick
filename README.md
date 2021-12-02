@@ -26,6 +26,7 @@ I de første to commands herunder er `-I` the name of the game. Den får xargs t
     
 ## Create a huge poster spreading poster on four A3
 Make sure that input file is the actual size of four times A3
+    
     magick christmas_help.jpg -extent 7016x9922 -crop 2x2@ +repage mytiles.jpg
     
 ## Ghostscript command to compress pdf-files
