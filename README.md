@@ -16,7 +16,7 @@ I de første to commands herunder er `-I` the name of the game. Den får xargs t
 
 ## Merge foldername into filename
     for FOLDER in *; do for FILE in $FOLDER/*; do mv "$FILE" "$FOLDER/${FOLDER}_$(basename $FILE)" ; done ; done
-
+Bash script solution can be found [here](https://gist.github.com/maxodsbjerg/d16b4060a765d6f933c304c6cc2e2d7e)
 ## Batch process files in OCRmyPDF:
     parallel --tag -j 2 ocrmypdf -l dan+eng '{}' '{}' ::: *.pdf
 
