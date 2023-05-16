@@ -14,6 +14,9 @@ I de første to commands herunder er `-I` the name of the game. Den får xargs t
     ls | egrep 'Skærm.+\.png'| xargs -I '{}' rm '{}'
 
 
+## Merge foldername into filename
+    for FOLDER in *; do for FILE in $FOLDER/*; do mv "$FILE" "$FOLDER/${FOLDER}_$(basename $FILE)" ; done ; done
+
 ## Batch process files in OCRmyPDF:
     parallel --tag -j 2 ocrmypdf -l dan+eng '{}' '{}' ::: *.pdf
 
